@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<PMML version="4.2" xmlns="http://www.dmg.org/PMML-4_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_2 http://www.dmg.org/v4-2/pmml-4-2.xsd">
+ <Header copyright="Copyright (c) 2016 asoni" description="RPart Decision Tree Model">
+  <Extension name="user" value="asoni" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+ </Header>
+ <DataDictionary numberOfFields="4">
+  <DataField name="result" optype="continuous" dataType="string">
+  </DataField>
+  <DataField name="opposite_team" optype="continuous" dataType="string">
+  </DataField>
+    <DataField name="chasing" optype="categorical" dataType="string">
+   <Value value="true"/>
+   <Value value="false"/>
+  </DataField>
+   <DataField name="ground" optype="continuous" dataType="string">
+  </DataField>
+ </DataDictionary>
+ <TreeModel modelName="RPart_Model" functionName="classification" algorithmName="rpart" splitCharacteristic="binarySplit" noTrueChildStrategy="returnLastPrediction">
+  <MiningSchema>
+   <MiningField name="result" usageType="predicted"/>
+    <MiningField name="ground" usageType="active"/>
+      <MiningField name="chasing" usageType="active"/>
+   <MiningField name="opposite_team" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_result" optype="continuous" dataType="string" feature="predictedValue"/>
+  </Output>
+   <Node id="25" score="31.63:53.84" recordCount="118">
+   <True/>
+<Node id="1" score="27.806:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="Adelaide Oval"/> <SimplePredicate field="chasing" operator="equal" value="false"/></CompoundPredicate></Node>
+<Node id="2" score="27.206:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="West Indies"/> <SimplePredicate field="ground" operator="equal" value="Brisbane Cricket ground"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="3" score="29.006:0.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="Melbourne Cricket Ground"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="4" score="33.206:0.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="Optus Stadium"/> <SimplePredicate field="chasing" operator="equal" value="false"/></CompoundPredicate></Node>
+<Node id="5" score="28.606:0.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="West Indies"/> <SimplePredicate field="ground" operator="equal" value="Sydney Cricket Ground"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="6" score="37.806:0.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="Sydney Cricket Ground"/> <SimplePredicate field="chasing" operator="equal" value="false"/></CompoundPredicate></Node>
+<Node id="7" score="15.806000000000001:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="West Indies"/> <SimplePredicate field="ground" operator="equal" value="Waca Ground"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="8" score="16.235999999999997:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="Kennington Oval"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="9" score="45.77:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="Lord's"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="10" score="39.67:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="Lord's"/> <SimplePredicate field="chasing" operator="equal" value="false"/></CompoundPredicate></Node>
+<Node id="11" score="39.436:0.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="Old Trafford"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="12" score="15.435999999999998:0.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="Riverside Ground"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="13" score="30.136000000000003:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="The Rose Bowl"/> <SimplePredicate field="chasing" operator="equal" value="false"/></CompoundPredicate></Node>
+<Node id="14" score="29.236:0.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="The Rose Bowl"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="15" score="60.636:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="Trent Bridge"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="16" score="32.136:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="Trent Bridge"/> <SimplePredicate field="chasing" operator="equal" value="false"/></CompoundPredicate></Node>
+<Node id="17" score="16.192:0.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="India"/> <SimplePredicate field="ground" operator="equal" value="Dr YS Rajasekhara Reddy Cricket Stadium"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="18" score="40.791999999999994:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="India"/> <SimplePredicate field="ground" operator="equal" value="Reliance Stadium"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="19" score="15.591999999999999:0.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="India"/> <SimplePredicate field="ground" operator="equal" value="Vidarbha Cricket Association Stadium"/> <SimplePredicate field="chasing" operator="equal" value="false"/></CompoundPredicate></Node>
+<Node id="20" score="31.046:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="West Indies"/> <SimplePredicate field="ground" operator="equal" value="New Wanderers Stadium"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="21" score="38.146:0.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="India"/> <SimplePredicate field="ground" operator="equal" value="SuperSport Park"/> <SimplePredicate field="chasing" operator="equal" value="true"/></CompoundPredicate></Node>
+<Node id="22" score="30.046:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="Pakistan"/> <SimplePredicate field="ground" operator="equal" value="SuperSport Park"/> <SimplePredicate field="chasing" operator="equal" value="false"/></CompoundPredicate></Node>
+<Node id="23" score="22.48:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="England"/> <SimplePredicate field="ground" operator="equal" value="SuperSport Park"/> <SimplePredicate field="chasing" operator="equal" value="false"/></CompoundPredicate></Node>
+<Node id="24" score="20.445999999999998:100.0"><CompoundPredicate booleanOperator="and"> <SimplePredicate field="opposite_team" operator="equal" value="New Zealand"/> <SimplePredicate field="ground" operator="equal" value="SuperSport Park"/> <SimplePredicate field="chasing" operator="equal" value="false"/></CompoundPredicate></Node>
+
+    </Node>
+       
+ </TreeModel>
+</PMML>
